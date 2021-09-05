@@ -10,7 +10,7 @@ public interface PersonRepository extends CrudRepository<Person, Integer> {
   //=======================================================================================
   // RETURN PERSON VIEW
   //=======================================================================================
-  @Query(value = "SELECT person FROM Person person WHERE person.name = 'John' AND person.age  = 20")
+  @Query(value = "SELECT person.name AS name, person.age AS age FROM Person person WHERE person.name='John'")
   PersonView returnPersonView();
 
 }
